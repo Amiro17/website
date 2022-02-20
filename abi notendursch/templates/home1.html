@@ -1,0 +1,38 @@
+{% extends 'base.html '%}
+
+{% block head %}
+
+<link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/home1.css')}}">
+
+<a href="/Amiro">Amiro</a>
+
+<title>Main</title>
+
+{% endblock %}
+
+{% block body %}
+
+<form method="POST">
+    <select id="choice1" name="choice1">
+        <option value="Mathe" selected>Mathe</option>
+        <option value="Chemie">Chemie</option>
+        <option value="Pysik">Pysik</option>
+    </select>
+    <select id="choice2" name="choice2">
+        <option value="Mathe" selected>Mathe</option>
+        <option value="Chemie">Chemie</option>
+        <option value="Pysik">Pysik</option>
+    </select>
+    <select id="choice3" name="choice3">
+        <option value="Mathe" selected>Mathe</option>
+        <option value="Chemie">Chemie</option>
+        <option value="Pysik">Pysik</option>
+    </select>
+    <input type="submit">
+</form>
+
+<h1> Salam aleikum </h1>
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="shortcut icon" type="image/jpg" href="favicon.jpg">
+  <title>Amiro</title>
+
+  <script>
+    function check() {
+      var password = window.prompt("Enter your password: ");
+      if (password == "123") {
+        document.getElementById("password").innerHTML = password;
+      }
+      else {
+        alert("The password is wrong please try again");
+        check();
+      }
+    }
+    check();
+
+  </script>
+
+  <script src="{{url_for('static', filename='js/particles.js')}}"></script>
+  <script>
+
+    window.onresize = () => {
+      pJSDom[0].pJS.fn.particlesRefresh();
+    };
+
+    particlesJS.load('particles-js', "{{url_for('static', filename='js/particles.json')}}");
+
+    setTimeout(() => {
+      document.getElementById('particles-js').style.opacity = 1;
+    }, 750);
+
+
+  </script>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+  <head>
+
+
+  <body>
+
+    <div id="particles-js" style="opacity: 1;">
+      <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="923" height="881"></canvas>
+    </div>
+    <script type="text/javascript" src="{{url_for('static', filename='js/app.js')}}"></script>
+    <h1>
+      <div class=" fname"><span>Amiro</span></div> <br>
+      <div class="lname"><span>
+          <p>&hearts;&hearts;&hearts;
+          <p>
+        </span></div>
+    </h1>
+
+
+
+
+
+
+
+  </body>
+
+</html>
